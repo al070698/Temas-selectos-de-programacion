@@ -1,0 +1,22 @@
+/* Estilos para Composite View */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Clase principal - contenedor de la vista compuesta */
+.principal {
+  min-height: 800px;
+}
+
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}

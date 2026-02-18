@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title><%= titulo %></title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="<%= css %>">
+</head>
+<body>
+    <nav>
+        <a href="/">🏠 Inicio</a>
+        <a href="/productos">📦 Productos</a>
+        <a href="/contacto">📧 Contacto</a>
+    </nav>
+
+    <div class="error-page">
+        <h1>404</h1>
+        <p>El Dispatcher no encontró una vista para esta ruta 😅</p>
+        <a class="btn" href="/">Volver al inicio</a>
+    </div>
+</body>
+</html>
