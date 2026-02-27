@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Patrón Facade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Patrón Facade - Tienda</h1>
+    <p>El cliente solo llama a <strong>un método</strong> de la Facade y ella coordina todo.</p>
+
+    <form id="formulario">
+        <label>Producto:</label>
+        <select id="producto">
+            <option value="Audífonos">Audífonos - $450</option>
+            <option value="Teclado">Teclado - $890</option>
+            <option value="Mouse">Mouse - $350</option>
+        </select>
+
+        <label>Correo:</label>
+        <input type="email" id="email" value="rafa@correo.com">
+
+        <button type="submit">Comprar</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
