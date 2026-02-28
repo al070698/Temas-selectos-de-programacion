@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Patrón Microservicios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Patrón Microservicios - Tienda</h1>
+    <p>Cada servicio corre en su propio puerto. El <strong>API Gateway</strong> los conecta.</p>
+
+    <!-- Estado de microservicios -->
+    <div class="card">
+        <h2>Estado de Microservicios</h2>
+        <div id="estado" class="estado-grid"></div>
+        <button onclick="verificarEstado()" class="btn-estado">Verificar Estado</button>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab active" onclick="cambiarTab('productos')">📦 Productos</button>
+        <button class="tab" onclick="cambiarTab('usuarios')">👤 Usuarios</button>
+        <button class="tab" onclick="cambiarTab('pedidos')">🛒 Pedidos</button>
+    </div>
+
+    <!-- Panel Productos -->
+    <div id="panel-productos" class="panel">
+        <div class="card">
+            <h2>Agregar Producto</h2>
+            <form id="form-producto">
+                <input type="text" id="prod-nombre" placeholder="Nombre del producto" required>
+                <input type="number" id="prod-precio" placeholder="Precio" step="0.01" required>
+                <input type="number" id="prod-stock" placeholder="Stock" required>
+                <button type="submit">Agregar</button>
+            </form>
+        </div>
+        <div class="card">
+            <h2>Lista de Productos <span class="puerto">:3001</span></h2>
+            <table>
+                <thead><tr><th>ID</th><th>Nombre</th><th>Precio</th><th>Stock</th></tr></thead>
+                <tbody id="tabla-productos"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Panel Usuarios -->
+    <div id="panel-usuarios" class="panel" style="display:none;">
+        <div class="card">
+            <h2>Agregar Usuario</h2>
+            <form id="form-usuario">
+                <input type="text" id="usr-nombre" placeholder="Nombre completo" required>
+                <input type="email" id="usr-email" placeholder="Correo electrónico" required>
+                <button type="submit">Agregar</button>
+            </form>
+        </div>
+        <div class="card">
+            <h2>Lista de Usuarios <span class="puerto">:3002</span></h2>
+            <table>
+                <thead><tr><th>ID</th><th>Nombre</th><th>Email</th></tr></thead>
+                <tbody id="tabla-usuarios"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Panel Pedidos -->
+    <div id="panel-pedidos" class="panel" style="display:none;">
+        <div class="card">
+            <h2>Crear Pedido</h2>
+            <form id="form-pedido">
+                <label>Usuario:</label>
+                <select id="ped-usuario" required></select>
+                <label>Producto:</label>
+                <select id="ped-producto" required></select>
+                <label>Cantidad:</label>
+                <input type="number" id="ped-cantidad" value="1" min="1" required>
+                <button type="submit">Crear Pedido</button>
+            </form>
+        </div>
+        <div class="card">
+            <h2>Lista de Pedidos <span class="puerto">:3003</span></h2>
+            <table>
+                <thead><tr><th>ID</th><th>Usuario</th><th>Producto</th><th>Cant.</th><th>Total</th><th>Fecha</th></tr></thead>
+                <tbody id="tabla-pedidos"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Diagrama -->
+    <div class="card diagrama-card">
+        <h2>Arquitectura de Microservicios</h2>
+        <div class="arquitectura">
+            <div class="arq-item cliente">👤 Cliente<br><small>Frontend</small></div>
+            <div class="arq-flecha">→</div>
+            <div class="arq-item gateway">🌐 API Gateway<br><small>:3000</small></div>
+            <div class="arq-flecha">→</div>
+            <div class="arq-servicios">
+                <div class="arq-item servicio">📦 Productos<br><small>:3001</small></div>
+                <div class="arq-item servicio">👤 Usuarios<br><small>:3002</small></div>
+                <div class="arq-item servicio">🛒 Pedidos<br><small>:3003</small></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mensaje"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
