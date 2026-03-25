@@ -1,0 +1,14 @@
+/* =============================================
+   contacto.css - Estilos SOLO para la vista contacto
+   ============================================= */
+
+.info {
+    background: #e3f2fd;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 4px solid #2196f3;
+}
+
+.info p {
+    margin: 8px 0;
+}

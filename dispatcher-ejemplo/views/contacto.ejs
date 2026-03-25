@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title><%= titulo %></title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="<%= css %>">
+</head>
+<body>
+    <nav>
+        <a href="/">🏠 Inicio</a>
+        <a href="/productos">📦 Productos</a>
+        <a href="/contacto">📧 Contacto</a>
+    </nav>
+
+    <h1><%= titulo %></h1>
+
+    <div class="info">
+        <p>📧 Email: <strong><%= datos.email %></strong></p>
+        <p>📞 Teléfono: <strong><%= datos.telefono %></strong></p>
+    </div>
+
+    <p class="nota">
+        Esta vista fue despachada por el <strong>Dispatcher</strong> desde la ruta <code>/contacto</code>
+    </p>
+</body>
+</html>

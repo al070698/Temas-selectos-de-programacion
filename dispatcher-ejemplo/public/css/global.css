@@ -1,0 +1,40 @@
+/* =============================================
+   global.css - Estilos compartidos por TODAS
+   las vistas (navegación, body, etc.)
+   ============================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    color: #333;
+}
+
+nav {
+    background: #2c3e50;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+.nota {
+    margin-top: 16px;
+    color: #888;
+    font-size: 0.9rem;
+}

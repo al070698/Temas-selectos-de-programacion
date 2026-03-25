@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Patrón Service Locator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Service Locator</h1>
+    <p>Selecciona un servicio. La primera vez lo <strong>crea</strong>, las siguientes lo <strong>saca del caché</strong>.</p>
+
+    <form id="formulario">
+        <label>Servicio:</label>
+        <select id="servicio">
+            <option value="BaseDatos">Base de Datos</option>
+            <option value="Correo">Correo</option>
+            <option value="Notificaciones">Notificaciones</option>
+        </select>
+
+        <label>Parámetro:</label>
+        <input type="text" id="accion" value="usuarios" placeholder="tabla, email o usuario">
+
+        <button type="submit">Usar servicio</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <h3>Servicios en caché:</h3>
+    <div id="cache">Vacío - ningún servicio ha sido solicitado aún</div>
+
+    <script src="app.js"></script>
+</body>
+</html>

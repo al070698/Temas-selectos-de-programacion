@@ -1,0 +1,11 @@
+/* =============================================
+   inicio.css - Estilos SOLO para la vista inicio
+   ============================================= */
+
+.mensaje {
+    background: #e8f5e9;
+    padding: 16px;
+    border-radius: 8px;
+    color: #2e7d32;
+    border-left: 4px solid #4caf50;
+}

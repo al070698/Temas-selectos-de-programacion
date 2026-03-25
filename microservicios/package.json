@@ -1,0 +1,13 @@
+{
+  "name": "microservicios",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node gateway.js",
+    "productos": "node servicios/productos.js",
+    "usuarios": "node servicios/usuarios.js",
+    "pedidos": "node servicios/pedidos.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

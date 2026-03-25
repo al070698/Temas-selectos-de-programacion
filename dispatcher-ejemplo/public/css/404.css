@@ -1,0 +1,27 @@
+/* =============================================
+   404.css - Estilos SOLO para la vista 404
+   ============================================= */
+
+.error-page {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.error-page h1 {
+    color: #e74c3c;
+    font-size: 3rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 16px;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #1a252f;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrón Business Delegate</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>🏢 Patrón Business Delegate</h1>
+            <p>Sistema de Tienda en Línea — Node.js + Express</p>
+        </div>
+
+        <!-- Diagrama del patrón -->
+        <div class="diagrama">
+            <h2>📐 Flujo del Patrón</h2>
+            <div class="flujo">
+                <span class="flujo-item">👤 Cliente (Tú)</span>
+                <span class="flujo-flecha">→</span>
+                <span class="flujo-item active">📋 Business Delegate</span>
+                <span class="flujo-flecha">→</span>
+                <span class="flujo-item">🔍 Lookup Service</span>
+                <span class="flujo-flecha">→</span>
+                <span class="flujo-item">⚙️ Servicio de Negocio</span>
+            </div>
+        </div>
+
+        <!-- Botones de servicios -->
+        <div class="servicios">
+            <a href="/servicio/pedidos" class="btn-servicio">
+                <div class="icono">🛒</div>
+                <div class="nombre">Pedidos</div>
+                <div class="desc">Registrar un nuevo pedido</div>
+            </a>
+            <a href="/servicio/inventario" class="btn-servicio">
+                <div class="icono">📦</div>
+                <div class="nombre">Inventario</div>
+                <div class="desc">Verificar stock disponible</div>
+            </a>
+            <a href="/servicio/envios" class="btn-servicio">
+                <div class="icono">🚚</div>
+                <div class="nombre">Envíos</div>
+                <div class="desc">Programar un envío</div>
+            </a>
+        </div>
+
+        <!-- Log de operaciones (se inyecta desde el servidor) -->
+        <%LOG_SECTION%>
+
+        <div class="footer">
+            Patrón Business Delegate — Sistemas Distribuidos — UAC 2025
+        </div>
+
+    </div>
+</body>
+</html>
