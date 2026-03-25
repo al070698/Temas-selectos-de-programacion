@@ -11,7 +11,7 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("org.example.controller")  // ← antes decía com.ejemplo.controller
+@ComponentScan("org.example.controller")
 public class AppConfig implements WebMvcConfigurer {
 
     @Bean
